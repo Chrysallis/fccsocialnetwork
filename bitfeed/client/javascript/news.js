@@ -1,5 +1,3 @@
-
-    
 Meteor.subscribe('theNews');
  Meteor.subscribe('allUsers');
 
@@ -43,7 +41,7 @@ Template.register.events({
                 Router.go('/')
             }
             else {
-                console.log('somthing went wrong');
+                console.log('something went wrong');
             }
         });
     }

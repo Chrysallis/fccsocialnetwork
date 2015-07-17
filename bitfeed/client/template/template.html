@@ -1,16 +1,9 @@
 
  <template name='allNewsView'>
-         <div class='container'>
-                 <div class='row'>
-                         <div class='col-xs-8 col-xs-offset-2'>
-                                 <ul class='list-group'>
-                                         <!-- am loading -->
-                                         {{#each news}}
-                                            {{> newsItem}}
-                                         {{/each}}
-                                 </ul>
-                         </div>
-                 </div>
+         <div class='ui feed'>
+                     {{#each news}}
+                         {{> newsItem}}
+                     {{/each}}
          </div>
  </template>
 
@@ -20,6 +13,20 @@
                  <a href="/profile/{{owner}}">{{username}}</a> <!-- TODO// fix link -->
                  <a href='/news/{{urlTitle}}' class='badge no-style'>comments</a>
          </li>
+
+        <div class = 'event'>
+            <div class = 'label'>
+                <img src = '{{avatarFolder}}/{{avatar}}'>
+                </img>
+            </div>
+            <div class="content"><div class="summary"><a class="user">
+                {{action}}
+            </a> </div> </div>
+            <div class="date">{time}</div>
+            <div class="meta"><a class="like"><i class="like icon"></i>
+                {{likes}} Likes
+            </a> </div>
+        </div>
  </template>
 
  <template name='addNews'>
