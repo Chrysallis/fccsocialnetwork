@@ -15,3 +15,6 @@ service-configuration
 http
 email
 meteorhacks:ssr
+underscore
+semantic:ui
+flemay:less-autoprefixer

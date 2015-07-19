@@ -1,7 +1,22 @@
 <template name='newsItem'>
-         <li class='list-group-item'>
-                 <a href="{{url}}" target='_blank'>{{title}}</a> by  <!-- TODO// fix link out leaving site-->
-                 <a href="/profile/{{owner}}">{{username}}</a>
-                 <a href='/news/{{urlTitle}}' class='badge no-style'>comments</a>
-         </li>
+         <div class='card'>
+             <div class ='content'>
+             <div class = "header centered">
+                 <a href="{{url}}" target='_blank'>{{title}}</a>  <!-- TODO// fix link out leaving site-->
+                 </div>
+                 <div class = "meta">
+                 by <a href="/profile/{{owner}}">{{username}}</a>
+                     </div>
+             </div>
+                 <div class = "description">
+                     <p>
+                         <!-- todo// add user descriptions -->
+                     </p>
+
+                 </div>
+                 <div class = "extra content blue">
+                 <a class = "ui label circular" href='/news/{{urlTitle}}'><i class = "comments icon"></i></a>
+                 </div>
+                 </div>
+
  </template>

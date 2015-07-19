@@ -1,14 +1,28 @@
 <template name='profile'>
         {{#if  currentUser}}
-        Username: {{username}}<br>
-        Email: {{emails}}
-        {{log}}
-        {{#with profile}}
-            Full Name: {{name}}
-         <img src="{{avatar_url}}">
-         {{login}}
-         {{email}}
-            {{log}}
-            {{/with}}
+            <div class="profile ui modal">
+                <div class="content">
+                    <div class="ui medium image">
+                        <img src="{{avatar_url}}">
+                    </div>
+                    <div class = "description">
+                        Username: {{username}}<br>
+                        Email: {{emails}}
+                        {{log}}
+                        {{#with profile}}
+                            Full Name: {{name}}
+
+                            {{login}}
+                            {{email}}
+                            {{log}}
+                        {{/with}}
+                    </div>
+                </div>
+                <div class="actions">
+                    <button class = "ui positive right labeled button">
+                        Exit
+                    </button>
+                </div>
+            </div>
          {{/if}}
  </template>
