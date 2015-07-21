@@ -1,6 +1,6 @@
-<template name='signInWithEmailModal'>
+<template name='RegisterModal'>
         <form id="sign-in-with-email">
-                  <div class="modal-body">
+                  <div class="ui signup modal centered">
                               <div class="form-group">
 
                                      <label for="username">Username</label>
@@ -8,8 +8,7 @@
 
                                      <label for="emailAddress">Email Address</label>
                                          <input type="email" id='email'  name="emailAddress"  class="form-control" placeholder="What's your email, friend?">
-                              </div>
-                              <div class="form-group">
+
                                  <label for="password">Password</label>
                                      <input type="password" id='password' name="password" class="form-control" placeholder="How about a password, pal?">
 
@@ -18,11 +17,7 @@
 
                                  <label for="lastName">Last Name</label>
                                      <input type="text" id='lastName' name="lastName" class="form-control" placeholder="Last Name">
-                              </div>
+                      <button type="submit" id='createAccount' class = 'ui button'>Create Account</button></div>
                    </div>
-                   <div class="modal-footer">
-                       <button type="submit" id='createAccount' class="btn btn-primary btn-create-account">Create Account</button>
-                       <button type="submit" id='signIn' class="btn btn-default btn-sign-in">Sign In</button>
-                 </div>
       </form>
  </template>

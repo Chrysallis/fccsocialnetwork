@@ -1,6 +1,6 @@
 
-
-/*Accounts.onCreateUser(function (options, user){
+/*
+Accounts.onCreateUser(function (options, user){
     var accessToken = user.services.github.accessToken,
         result,
         profile;
@@ -29,4 +29,5 @@
 
                   return user;
 
-});*/
+});
+*/

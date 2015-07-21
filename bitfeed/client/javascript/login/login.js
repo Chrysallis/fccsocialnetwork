@@ -9,13 +9,30 @@ Template.login.events({
                     Router.go('/');
             }
         });
+    },
+    'click #Register': function() {
+                $(".signup.modal").modal('show');
+            },
+    'click #signIn': function(event){
+        event.preventDefault();
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+        console.log('form submited');
+        Meteor.loginWithPassword(email, password, function(err){
+            if(!err){
+                Router.go('/');
+            }
+            else {
+                console.log('somethings not right');
+            }
+        });
     }
 });
 
 
-Template.signInWithEmailModal.events({
+Template.RegisterModal.events({
     'click #createAccount': function(event){
-        event.preventDefault();
+        //event.preventDefault();
         var username =  document.getElementById('username').value;
         var email = document.getElementById('email').value;
         var password = document.getElementById('password').value;
@@ -32,21 +49,6 @@ Template.signInWithEmailModal.events({
                 console.log('somthing went wrong');
             }
         });
-
-    },
-
-    'click #signIn': function(event){
-        event.preventDefault();
-        var email = document.getElementById('email').value;
-        var password = document.getElementById('password').value;
-        console.log('form submited');
-        Meteor.loginWithPassword(email, password, function(err){
-            if(!err){
-                Router.go('/');
-            }
-            else {
-                console.log('somethings not right');
-            }
-        });
+        $(".signup.modal").modal('hide');
     }
 });

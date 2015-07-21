@@ -1,6 +1,4 @@
  <template name='login'>
-         {{> signInWithEmailModal}}
-
          <div class="row">
                  <div class='col-xs-12 col-sm-6'>
                          <div class='page-header'>
@@ -10,7 +8,10 @@
                          <ul class='btn-list'>
                                  <li><button type="button" id="github" class="btn btn-social-login btn-github"><i class="fa fa-github"></i> Sign in with GitHub</button></li>
                                  <li><button type="button" class="btn btn-social-login btn-success" data-toggle="modal" data-target="#sign-in-with-email-modal"><i class="fa fa-envelope"></i> Sign in with Email</button></li>
+                                 <button type="submit" id='Register' class="btn btn-primary btn-create-account">Register</button>
+
                          </ul>
                  </div>
          </div>
+     {{> RegisterModal}}
  </template>
